@@ -209,3 +209,71 @@ nav a:hover {
   background: linear-gradient(90deg, #22223b, #4fc6ce 90%);
 }
 
+/* Responsive styles */
+@media (max-width: 900px) {
+  .section {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+  .projects {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem 4vw;
+    gap: 1rem;
+  }
+  .hero {
+    padding: 2.5rem 0.5rem 1.2rem 0.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .typed {
+    font-size: 1.1rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .contact-form {
+    padding: 1.3rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.7rem 2vw;
+  }
+  nav a {
+    margin: 0 0.4rem;
+    font-size: 1rem;
+  }
+  .hero img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .typed {
+    font-size: 0.95rem;
+    min-height: 1.5em;
+  }
+  .section {
+    margin: 1.5rem auto 0 auto;
+    padding: 0 0.5rem;
+  }
+  .project-card {
+    padding: 1rem;
+  }
+  .contact-form {
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+    border-radius: 10px;
+  }
+}
