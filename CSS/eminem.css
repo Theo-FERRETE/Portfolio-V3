@@ -1,232 +1,223 @@
 body {
-    font-family: 'Poppins', 'Impact', 'Arial Black', sans-serif;
-    background: linear-gradient(135deg, #060000 60%, #1a1a1a 100%);
-    color: #fff;
-    letter-spacing: 0.5px;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #181818;
+    color: #eaeaea;
+    letter-spacing: 0.2px;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #3498db;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #217dbb;
 }
 
 header {
-    background: linear-gradient(90deg, #0c0000 80%, #f30000 100%);
+    background: #232323;
     color: #fff;
     text-align: center;
-    padding: 50px 20px 30px 20px;
-    border-bottom: 4px solid #00f3ef;
-    box-shadow: 0 4px 20px rgba(243,0,0,0.15);
-    position: relative;
+    padding: 40px 20px 20px 20px;
+    border-bottom: 2px solid #3498db;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 header .highlight {
-    color: #b0a9a9;
+    color: #3498db;
     font-weight: bold;
-    text-shadow: 2px 2px 8px #000;
 }
 
 header h1 {
-    font-size: 3.2em;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+    font-size: 2.5em;
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-family: 'Impact', 'Poppins', sans-serif;
-    text-shadow: 3px 3px 0 #f30000, 0 0 10px #000;
+    font-family: 'Poppins', Arial, sans-serif;
+    text-shadow: none;
 }
 
 header p {
-    font-size: 1.3em;
-    color: #e0e0e0;
-    text-shadow: 1px 1px 6px #000;
+    font-size: 1.1em;
+    color: #bdbdbd;
 }
 
-/* Navigation */
 nav {
-    background: #111;
-    padding: 12px 0;
-    border-bottom: 2px solid #00f3d7;
+    background: #202020;
+    padding: 10px 0;
+    border-bottom: 1px solid #232323;
 }
 
 .nav-links {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    gap: 30px;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li a {
-    color: #fff;
-    font-size: 1.2em;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    color: #eaeaea;
+    font-size: 1em;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 500;
     background: transparent;
-    border: 2px solid transparent;
-    transition: background 0.3s, color 0.3s, border 0.3s;
+    border: 1px solid transparent;
+    transition: background 0.2s, color 0.2s, border 0.2s;
 }
 
 .nav-links li a:hover {
-    background: #f30000;
+    background: #3498db;
     color: #fff;
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px #f30000;
+    border: 1px solid #217dbb;
 }
 
-/* Main Section */
 main {
-    padding: 50px 0 30px 0;
+    padding: 40px 0 20px 0;
 }
 
 .card {
-    background: linear-gradient(120deg, #070000 80%, #1a1a1a 100%);
-    margin: 30px auto;
-    border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(243,0,0,0.18);
+    background: #232323;
+    margin: 24px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
     overflow: hidden;
     text-align: center;
-    max-width: 700px;
-    border: 2px solid #f3f2f2;
-    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 600px;
+    border: 1px solid #292929;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(243,0,0,0.35);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
 }
 
 .card h2 {
-    background: #f30000;
-    color: #fff;
-    padding: 22px 0;
-    font-size: 2em;
-    letter-spacing: 2px;
+    background: #181818;
+    color: #3498db;
+    padding: 18px 0;
+    font-size: 1.5em;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: 'Impact', 'Poppins', sans-serif;
-    text-shadow: 2px 2px 8px #000;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 .card img.hero-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
-    filter: grayscale(30%) contrast(1.2);
-    border-bottom: 3px solid #f30000;
-    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(10%) contrast(1.1);
+    border-bottom: 2px solid #3498db;
+    transition: transform 0.2s, filter 0.2s;
 }
 
 .card img.hero-image:hover {
-    transform: scale(1.07) rotate(-2deg);
-    filter: grayscale(0%) contrast(1.4);
+    transform: scale(1.03);
+    filter: grayscale(0%) contrast(1.2);
 }
 
 .card p {
-    padding: 24px;
-    font-size: 1.15em;
-    color: #e0e0e0;
-    text-shadow: 1px 1px 6px #000;
+    padding: 18px;
+    font-size: 1em;
+    color: #bdbdbd;
 }
 
 .card .btn {
     display: inline-block;
-    padding: 14px 28px;
-    background: #f30000;
+    padding: 10px 22px;
+    background: #3498db;
     color: #fff;
-    font-weight: bold;
-    border-radius: 6px;
-    margin-top: 18px;
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 8px #f30000;
-    transition: background 0.3s, transform 0.2s;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 12px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 4px #3498db33;
+    border: none;
+    transition: background 0.2s, transform 0.15s;
 }
 
 .card .btn:hover {
-    background: #fff;
-    color: #f30000;
-    transform: scale(1.08);
-    border: 2px solid #f30000;
+    background: #217dbb;
+    color: #fff;
+    transform: scale(1.04);
 }
 
-/* Social */
 .social-list {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px;
+    gap: 14px;
 }
 
 .social-list li {
-    margin: 10px 0;
+    margin: 6px 0;
 }
 
 .social-list a {
-    text-decoration: none;
     color: #fff;
     display: flex;
     align-items: center;
-    font-weight: bold;
-    font-size: 1.1em;
-    background: #f30000;
+    font-weight: 500;
+    font-size: 1em;
+    background: #3498db;
     border-radius: 50px;
-    padding: 8px 18px;
-    box-shadow: 0 2px 8px #f30000;
-    transition: background 0.3s, color 0.3s;
+    padding: 7px 16px;
+    box-shadow: 0 1px 4px #3498db33;
+    transition: background 0.2s, color 0.2s;
 }
 
 .social-list a:hover {
     background: #fff;
-    color: #f30000;
+    color: #3498db;
 }
 
 .social-icon {
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
-    filter: grayscale(100%) brightness(2);
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    filter: grayscale(100%) brightness(1.5);
 }
 
-/* Footer */
 footer {
-    background: #0c0000;
-    color: #fff;
+    background: #181818;
+    color: #bdbdbd;
     text-align: center;
-    padding: 24px 0;
-    border-top: 3px solid #f30000;
-    font-size: 1.05em;
-    letter-spacing: 1px;
-    box-shadow: 0 -2px 12px #f30000;
+    padding: 18px 0;
+    border-top: 1.5px solid #3498db;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -1px 8px #3498db22;
 }
 
-/* Responsive Design */
 @media (max-width: 900px) {
     .card {
-        max-width: 95%;
+        max-width: 98%;
     }
 }
 
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
+        gap: 8px;
+        padding: 8px 0;
     }
-
     header h1 {
-        font-size: 2.2em;
+        font-size: 1.5em;
     }
-
     .card h2 {
-        font-size: 1.4em;
+        font-size: 1.1em;
     }
-
     .card p {
-        font-size: 1em;
+        font-size: 0.95em;
     }
-
     .card img.hero-image {
         max-width: 100%;
     }
@@ -234,15 +225,13 @@ footer {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
-
     .card h2 {
-        font-size: 1em;
+        font-size: 0.95em;
     }
-
     .card .btn {
-        padding: 10px 12px;
-        font-size: 1em;
+        padding: 8px 10px;
+        font-size: 0.95em;
     }
 }
