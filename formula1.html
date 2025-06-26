@@ -1,95 +1,141 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formula 1 - Le Temple de La Vitesse</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="CSS/formula1.css">
-  
-  <header>
-    <h1 data-lang="fr">Bienvenue dans le Monde de la <span class="highlight">Formule 1</span></h1>
-    <p data-lang="fr">Découvrez le frisson et l'excitation des courses de Formule 1</p>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">Formula 1</div>
+      <button id="menu-btn" class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#teams">Équipes</a></li>
+        <li><a href="#drivers">Pilotes</a></li>
+        <li><a href="#races">Courses</a></li>
+        <li><a href="#achievements">Palmarès</a></li>
+      </ul>
+    </div>
+    <ul id="mobile-menu" class="mobile-menu hidden">
+      <li><a href="#teams">Équipes</a></li>
+      <li><a href="#drivers">Pilotes</a></li>
+      <li><a href="#races">Courses</a></li>
+      <li><a href="#achievements">Palmarès</a></li>
+    </ul>
   </header>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#teams" data-lang="fr">Équipes</a></li>
-      <li><a href="#drivers" data-lang="fr">Pilotes</a></li>
-      <li><a href="#races" data-lang="fr">Courses</a></li>
-      <li><a href="#achievements" data-lang="fr">Palmarès</a></li>
-  
-    </ul>
-  </nav>
+  <section class="hero" style="background-image: url('https://images.pexels.com/photos/1102863/pexels-photo-1102863.jpeg');">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Bienvenue dans le monde de la <span class="text-red-600">Formule 1</span></h1>
+      <p>Vitesse. Passion. Technologie.</p>
+    </div>
+  </section>
 
-  <main>
-    <section id="teams" class="card">
-      <h2 data-lang="fr">Équipes</h2>
-      <div class="team-grid">
-        <div class="team">
-          <img src="https://www.leblogauto.com/wp-content/uploads/2024/12/1200-L-f1-2024-mercedes-dvoile-une-w15-radicalement-diffrente.jpg" alt="Mercedes">
+  <main class="main-content space-y-20">
+    <section id="teams" data-aos="fade-right">
+      <h2>Équipes</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://cdn-3.motorsport.com/images/amp/6xERpn40/s6/mercedes-f1-w16.jpg" alt="Mercedes">
           <h3>Mercedes</h3>
-          <p data-lang="fr">L'équipe Mercedes-AMG Petronas Formula One est une équipe de course de Formule 1 basée à Brackley, Northamptonshire, Angleterre.</p>
+          <p>Mercedes-AMG Petronas F1, équipe légendaire.</p>
         </div>
-        <div class="team">
+        <div class="card">
           <img src="https://www.italpassion.fr/wp-content/uploads/2025/02/ferrari-sf25-6-1024x683.jpg" alt="Ferrari">
           <h3>Ferrari</h3>
-          <p data-lang="fr">Scuderia Ferrari est la division course du constructeur automobile italien de luxe Ferrari et l'équipe de course qui participe aux courses de Formule 1.</p>
+          <p>Scuderia Ferrari, icône italienne.</p>
         </div>
-
       </div>
     </section>
 
-    <section id="drivers" class="card">
-      <h2 data-lang="fr">Pilotes</h2>
-      <div class="driver-grid">
-        <div class="driver">
-          <img src="https://media.lematin.ch/4/image/2023/11/10/822f0a96-404b-4cd1-81ac-e96d9446bb95.jpeg?auto=format%2Ccompress%2Cenhance&fit=max&w=1200&h=1200&rect=0%2C0%2C2048%2C1512&s=e4887d576e15c983fcc8261a37b1159b" alt="Lewis Hamilton">
+    <section id="drivers" data-aos="fade-left">
+      <h2>Pilotes</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://static.actu.fr/uploads/2020/07/c458c749f7d22815cdaa31702c6aefaa.jpg" alt="Lewis Hamilton">
           <h3>Lewis Hamilton</h3>
-           <p data-lang="fr">Lewis Hamilton est un pilote de course britannique qui participe actuellement à la Formule 1 pour l'équipe Mercedes-AMG Petronas Formula One.</p>
+          <p>7 fois champion du monde, pilote emblématique de Mercedes.</p>
         </div>
-        <div class="driver">
+        <div class="card">
           <img src="https://cdn-4.motorsport.com/images/amp/0L1o9JJ2/s6/sebastian-vettel-aston-martin-.jpg" alt="Sebastian Vettel">
           <h3>Sebastian Vettel</h3>
-           <p data-lang="fr">Sebastian Vettel est un pilote de course allemand qui participe à la Formule 1 pour l'équipe Aston Martin Cognizant Formula One.</p>
+          <p>Champion charismatique, vainqueur avec Red Bull et Ferrari.</p>
         </div>
       </div>
     </section>
 
-    <section id="races" class="card">
-      <h2 data-lang="fr">Courses</h2>
-      <div class="race-grid">
-        <div class="race">
-          <img src="https://f1only.fr/wp-content/uploads/2024/05/SI202405260332-scaled.jpg" alt="Monaco Grand Prix">
-          <h3>Monaco Grand Prix</h3>
-          <p data-lang="fr">Le Grand Prix de Monaco est une course de Formule 1 qui se tient chaque année sur le Circuit de Monaco.</p>
+    <section id="races" data-aos="zoom-in">
+      <h2>Courses</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://f1only.fr/wp-content/uploads/2024/05/SI202405260332-scaled.jpg" alt="Monaco GP">
+          <h3>Grand Prix de Monaco</h3>
+          <p>Le joyau urbain de la Formule 1, mythique et imprévisible.</p>
         </div>
-        <div class="race">
-          <img src="https://www.formulatours.com/wp-content/uploads/2020/02/Silverstone-F1-2021.jpg" alt="British Grand Prix">
-          <h3>British Grand Prix</h3>
-          <p data-lang="fr">Le Grand Prix de Grande-Bretagne est une course de Formule 1 qui se tient chaque année au Royaume-Uni.</p>
+        <div class="card">
+          <img src="https://www.formulatours.com/wp-content/uploads/2020/02/Silverstone-F1-2021.jpg" alt="Silverstone">
+          <h3>Grand Prix de Grande-Bretagne</h3>
+          <p>Le temple de la vitesse et berceau de la Formule 1.</p>
         </div>
       </div>
     </section>
 
-        <section id="achievements" class="card">
-      <h2 data-lang="fr">Palmarès</h2>
-      <div class="achievement-grid">
-        <div class="achievement">
-          <h3 data-lang="fr">Lewis Hamilton - 7 Championnats du Monde</h3>
-          <p data-lang="fr">Lewis Hamilton a remporté 7 Championnats du Monde de Formule 1, égalant le record de Michael Schumacher.</p>
+    <section id="achievements" data-aos="fade-up">
+      <h2>Palmarès</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Lewis Hamilton</h3>
+          <p>7 titres mondiaux - record égalé avec Michael Schumacher.</p>
         </div>
-        <div class="achievement">
-          <h3 data-lang="fr">Ferrari - 16 Championnats des Constructeurs</h3>
-          <p data-lang="fr">Scuderia Ferrari a remporté 16 Championnats des Constructeurs, le plus grand nombre dans l'histoire de la Formule 1.</p>
+        <div class="card">
+          <h3>Ferrari</h3>
+          <p>16 championnats constructeurs - palmarès inégalé.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p data-lang="fr">&copy; 2024 Formule 1. Tous droits réservés.</p>
-    <div class="socials">
- </div>
-  </footer>
+  <footer class="footer flex flex-col items-center py-6 bg-gray-900 text-white">
+    <div class="mb-2">&copy; 2024 Formula 1. Tous droits réservés.</div>
+    <div class="flex space-x-4">
+      <a href="https://www.facebook.com/Formula1" target="_blank" aria-label="Facebook" class="hover:text-blue-500">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.406.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .592 23.406 0 22.675 0"></path></svg>
+      </a>
+      <a href="https://twitter.com/F1" target="_blank" aria-label="Twitter" class="hover:text-blue-400">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 0 0-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.117 2.823 5.254a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.057 0 14.009-7.496 14.009-13.986 0-.21 0-.423-.016-.634A9.936 9.936 0 0 0 24 4.557z"></path></svg>
+      </a>
+      <a href="https://www.instagram.com/f1/" target="_blank" aria-label="Instagram" class="hover:text-pink-500">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.497 5.782 2.225 7.148 2.163 8.414 2.105 8.794 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.385 3.678 1.366c-.98.98-1.234 2.092-1.293 3.373C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.612.059 1.281.313 2.393 1.293 3.373.98.98 2.092 1.234 3.373 1.293C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.313 3.373-1.293.98-.98 1.234-2.092 1.293-3.373.059-1.28.072-1.689.072-7.612 0-5.923-.013-6.332-.072-7.612-.059-1.281-.313-2.393-1.293-3.373-.98-.98-2.092-1.234-3.373-1.293C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg>
+      </a>
+      <a href="https://www.youtube.com/user/Formula1" target="_blank" aria-label="YouTube" class="hover:text-red-600">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.425 3.5 12 3.5 12 3.5s-7.425 0-9.391.569A2.994 2.994 0 0 0 .502 6.186C0 8.153 0 12 0 12s0 3.847.502 5.814a2.994 2.994 0 0 0 2.107 2.117C4.575 20.5 12 20.5 12 20.5s7.425 0 9.391-.569a2.994 2.994 0 0 0 2.107-2.117C24 15.847 24 12 24 12s0-3.847-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+      </a>
+      <a href="https://www.tiktok.com/@f1" target="_blank" aria-label="TikTok" class="hover:text-gray-400">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.326 2.001h3.002c.001 2.07 1.68 3.75 3.75 3.751v3.003a6.753 6.753 0 0 1-3.75-1.14v7.885c0 3.728-3.026 6.754-6.754 6.754A6.755 6.755 0 0 1 1.57 15.5c0-3.728 3.026-6.754 6.754-6.754.342 0 .678.025 1.008.073v3.073a3.682 3.682 0 1 0 2.994 3.61V2.001z"></path></svg>
+      </a>
+    </div>
+  </footer></a>
+
+  <script src="JS/f1.js"></script>
 </body>
 </html>
